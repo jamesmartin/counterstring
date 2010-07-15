@@ -5,7 +5,7 @@ describe CounterString do
   before(:each) do
     @cs = CounterString.new
   end
-    it "returns blank for empty constructor" do
+    it "returns blank for no arguments" do
       @cs.generate.should == ""
     end
 
