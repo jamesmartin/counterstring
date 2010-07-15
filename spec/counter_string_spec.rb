@@ -5,10 +5,10 @@ class CounterString
   end
 
   def generate
-    if @length == 1
-      return "#{@length}"
-    elsif @length == 0
+    if @length == 0
       return ""
+    elsif @length == 1
+      return "#{@length}"
     else
       output = "2" + @position_marker
       last_counter_digit = 2
