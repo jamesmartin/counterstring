@@ -10,7 +10,7 @@ class CounterString
     elsif @length == 0
       return ""
     else
-      output = "2*"
+      output = "2" + @position_marker
       last_counter_digit = 2
       while output.size < @length
         # Figure out the next counter digit
@@ -18,7 +18,7 @@ class CounterString
         if counter_digit.to_s.size > last_counter_digit.to_s.size
           counter_digit += 1
         end
-        token = counter_digit.to_s + "*"
+        token = counter_digit.to_s + @position_marker 
         remaining_length = @length - output.size
         if remaining_length < token.size + output.size 
           token = token[0,remaining_length]
