@@ -29,7 +29,7 @@ describe CounterString do
       @cs.generate(11).should == "2*4*6*8*11*"
     end
 
-    it "returns 2*4..100* for length 100" do
+    it "returns 2*4..10 for length 100" do
       string = @cs.generate(100)
       string.size.should == 100
       string[96,99].should == "8*10"

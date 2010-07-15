@@ -1,6 +1,6 @@
 class CounterString
   def initialize()
-    @position_marker = "*"
+    @position_marker_character = "*"
   end
 
   def generate(length=0)
@@ -9,23 +9,23 @@ class CounterString
     elsif length == 1
       return "#{length}"
     else
-      output = "2" + @position_marker
-      last_counter_digit = 2
+      output = "2" + @position_marker_character
+      last_position_number = 2
       while output.size < length
-        # Figure out the next counter digit
-        counter_digit = output.size + (last_counter_digit.to_s.size + 1)
-        if counter_digit.to_s.size > last_counter_digit.to_s.size
-          counter_digit += 1
+        position_number = output.size + (last_position_number.to_s.size + 1)
+        if position_number.to_s.size > last_position_number.to_s.size
+          position_number += 1
         end
-        token = counter_digit.to_s + @position_marker 
+        token = position_number.to_s + @position_marker_character 
         remaining_length = length - output.size
         if remaining_length < token.size + output.size 
           token = token[0,remaining_length]
         end
         output += token
-        last_counter_digit = counter_digit 
+        last_position_number = position_number 
       end
     end
     return output
   end
+
 end
