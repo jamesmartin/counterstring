@@ -40,4 +40,8 @@ describe CounterString do
       string.size.should == 2047
       string[2039,2046].should == "043*2048"
     end
+
+    it "allows reasonable numeric-looking strings as arguments" do
+        @cs.generate("3").should == "2*4"
+    end
 end
