@@ -1,20 +1,18 @@
 Counter strings are self documenting strings with respect to their length. CounterString is a class that creates counter strings of arbitrary length.
 
-James Bach[1], describes them as follows:
+James Bach, [describes counter strings](http://www.satisfice.com/blog/archives/22) as follows:
 
 "A counterstring is a graduated string of arbitrary length. No matter where you are in the string, you always know the character position. This comes in handy when you are pasting huge strings into fields and they get truncated at a certain point. You want to know how many characters that is."
 
 Here's a simple example of its use:
 
+```ruby
 require 'rubygems'
-require 'CounterString'
+require 'counter_string'
 
 cs = CounterString.new
 
 p cs.generate 35
 
-Produces:
-"2*4*6*8*11*14*17*20*23*26*29*32*35*"
-
-
-[1] http://www.satisfice.com/blog/archives/22
+=> "2*4*6*8*11*14*17*20*23*26*29*32*35*"
+```

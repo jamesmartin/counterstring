@@ -1,5 +1,4 @@
-$:.unshift File.join(File.dirname(__FILE__), "..", "lib")
-require 'CounterString'
+require_relative '../lib/counter_string'
 
 describe CounterString do
   before(:each) do

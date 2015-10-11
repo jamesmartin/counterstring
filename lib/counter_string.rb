@@ -17,13 +17,13 @@ class CounterString
         if position_number.to_s.size > last_position_number.to_s.size
           position_number += 1
         end
-        token = position_number.to_s + @position_marker_character 
+        token = position_number.to_s + @position_marker_character
         remaining_length = length - @output.size
-        if remaining_length < token.size + @output.size 
+        if remaining_length < token.size + @output.size
           token = token[0,remaining_length]
         end
         @output += token
-        last_position_number = position_number 
+        last_position_number = position_number
       end
     end
     return @output
