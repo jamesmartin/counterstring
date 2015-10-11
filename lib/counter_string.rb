@@ -5,7 +5,7 @@ class CounterString
   end
 
   def generate(length=0)
-	length = length.to_i
+    length = length.to_i
     if length == 0
       return ""
     elsif length == 1
